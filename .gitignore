@@ -3,7 +3,6 @@
 .idea
 target
 *.class
-*.properties
 
 # Log file
 *.log
