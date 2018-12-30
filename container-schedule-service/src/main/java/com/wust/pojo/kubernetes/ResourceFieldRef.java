@@ -1,0 +1,38 @@
+/**
+  * Copyright 2018 bejson.com 
+  */
+package com.wust.pojo.kubernetes;
+
+/**
+ * Auto-generated: 2018-12-28 20:22:43
+ *
+ * @author bejson.com (i@bejson.com)
+ * @website http://www.bejson.com/java2pojo/
+ */
+public class ResourceFieldRef {
+
+    private String containerName;
+    private String resource;
+    private String divisor;
+    public void setContainerName(String containerName) {
+         this.containerName = containerName;
+     }
+     public String getContainerName() {
+         return containerName;
+     }
+
+    public void setResource(String resource) {
+         this.resource = resource;
+     }
+     public String getResource() {
+         return resource;
+     }
+
+    public void setDivisor(String divisor) {
+         this.divisor = divisor;
+     }
+     public String getDivisor() {
+         return divisor;
+     }
+
+}
