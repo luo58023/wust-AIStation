@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.wust</groupId>
-	<artifactId>container-scheduling</artifactId>
+	<artifactId>container-scheduler-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>container-scheduling</name>
+	<name>container-scheduler-service</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
