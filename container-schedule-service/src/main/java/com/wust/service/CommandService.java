@@ -6,20 +6,20 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CommandService {
-    public JSONObject delectContainerStatus(String podName){
-        String scriptPath = getPath() + "/containerStatus.sh";
-        JSONObject result = ExecuteUtil.doCommand(scriptPath + " " + podName);
-        return result;
+    //轮询pod的status
+    public JSONObject detectPodStatus(String namespace,String podName){
+        String scriptPath = getPath() + "/PodStatus.sh";
+        return ExecuteUtil.doCommand(scriptPath + " " + namespace + " " + podName);
     }
 
-    public String getPath(){
+    private String getPath(){
         String path = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
         char[] c = path.toCharArray();
         int count = 0;
         int site = c.length-1;
         int site1 = 0;
         int site2 = 0;
-        String jarName = "/";
+        StringBuilder jarName = new StringBuilder("/");
         for (; site>0; site--){
             if (c[site] == '/'){
                 count++;
@@ -33,10 +33,9 @@ public class CommandService {
             }
         }
         for (; site2<=site1; site2++){
-            jarName += c[site2];
+            jarName.append(c[site2]);
         }
-        int end = path.indexOf(jarName);
-        path = path.substring(5, end) + "/script";
-        return path;
+        int end = path.indexOf(jarName.toString());
+        return path.substring(5, end) + "/script";
     }
 }

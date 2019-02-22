@@ -1,10 +1,10 @@
 /**
-  * Copyright 2018 bejson.com 
+  * Copyright 2019 bejson.com 
   */
 package com.wust.pojo.kubernetes;
 
 /**
- * Auto-generated: 2018-12-28 20:22:43
+ * Auto-generated: 2019-02-20 21:8:53
  *
  * @author bejson.com (i@bejson.com)
  * @website http://www.bejson.com/java2pojo/
@@ -13,6 +13,7 @@ public class Conditions {
 
     private String type;
     private String status;
+    private String lastUpdateTime;
     private String lastTransitionTime;
     private String reason;
     private String message;
@@ -28,6 +29,13 @@ public class Conditions {
      }
      public String getStatus() {
          return status;
+     }
+
+    public void setLastUpdateTime(String lastUpdateTime) {
+         this.lastUpdateTime = lastUpdateTime;
+     }
+     public String getLastUpdateTime() {
+         return lastUpdateTime;
      }
 
     public void setLastTransitionTime(String lastTransitionTime) {

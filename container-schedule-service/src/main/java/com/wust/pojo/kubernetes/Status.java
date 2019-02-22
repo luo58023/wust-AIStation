@@ -1,55 +1,25 @@
 /**
-  * Copyright 2018 bejson.com 
+  * Copyright 2019 bejson.com 
   */
 package com.wust.pojo.kubernetes;
 import java.util.List;
 
 /**
- * Auto-generated: 2018-12-28 20:22:43
+ * Auto-generated: 2019-02-20 21:8:53
  *
  * @author bejson.com (i@bejson.com)
  * @website http://www.bejson.com/java2pojo/
  */
 public class Status {
 
-    private int currentNumberScheduled;
-    private int numberMisscheduled;
-    private int desiredNumberScheduled;
-    private int numberReady;
     private int observedGeneration;
-    private int updatedNumberScheduled;
-    private int numberAvailable;
-    private int numberUnavailable;
-    private int collisionCount;
+    private int replicas;
+    private int updatedReplicas;
+    private int readyReplicas;
+    private int availableReplicas;
+    private int unavailableReplicas;
     private List<Conditions> conditions;
-    public void setCurrentNumberScheduled(int currentNumberScheduled) {
-         this.currentNumberScheduled = currentNumberScheduled;
-     }
-     public int getCurrentNumberScheduled() {
-         return currentNumberScheduled;
-     }
-
-    public void setNumberMisscheduled(int numberMisscheduled) {
-         this.numberMisscheduled = numberMisscheduled;
-     }
-     public int getNumberMisscheduled() {
-         return numberMisscheduled;
-     }
-
-    public void setDesiredNumberScheduled(int desiredNumberScheduled) {
-         this.desiredNumberScheduled = desiredNumberScheduled;
-     }
-     public int getDesiredNumberScheduled() {
-         return desiredNumberScheduled;
-     }
-
-    public void setNumberReady(int numberReady) {
-         this.numberReady = numberReady;
-     }
-     public int getNumberReady() {
-         return numberReady;
-     }
-
+    private int collisionCount;
     public void setObservedGeneration(int observedGeneration) {
          this.observedGeneration = observedGeneration;
      }
@@ -57,32 +27,39 @@ public class Status {
          return observedGeneration;
      }
 
-    public void setUpdatedNumberScheduled(int updatedNumberScheduled) {
-         this.updatedNumberScheduled = updatedNumberScheduled;
+    public void setReplicas(int replicas) {
+         this.replicas = replicas;
      }
-     public int getUpdatedNumberScheduled() {
-         return updatedNumberScheduled;
-     }
-
-    public void setNumberAvailable(int numberAvailable) {
-         this.numberAvailable = numberAvailable;
-     }
-     public int getNumberAvailable() {
-         return numberAvailable;
+     public int getReplicas() {
+         return replicas;
      }
 
-    public void setNumberUnavailable(int numberUnavailable) {
-         this.numberUnavailable = numberUnavailable;
+    public void setUpdatedReplicas(int updatedReplicas) {
+         this.updatedReplicas = updatedReplicas;
      }
-     public int getNumberUnavailable() {
-         return numberUnavailable;
+     public int getUpdatedReplicas() {
+         return updatedReplicas;
      }
 
-    public void setCollisionCount(int collisionCount) {
-         this.collisionCount = collisionCount;
+    public void setReadyReplicas(int readyReplicas) {
+         this.readyReplicas = readyReplicas;
      }
-     public int getCollisionCount() {
-         return collisionCount;
+     public int getReadyReplicas() {
+         return readyReplicas;
+     }
+
+    public void setAvailableReplicas(int availableReplicas) {
+         this.availableReplicas = availableReplicas;
+     }
+     public int getAvailableReplicas() {
+         return availableReplicas;
+     }
+
+    public void setUnavailableReplicas(int unavailableReplicas) {
+         this.unavailableReplicas = unavailableReplicas;
+     }
+     public int getUnavailableReplicas() {
+         return unavailableReplicas;
      }
 
     public void setConditions(List<Conditions> conditions) {
@@ -90,6 +67,13 @@ public class Status {
      }
      public List<Conditions> getConditions() {
          return conditions;
+     }
+
+    public void setCollisionCount(int collisionCount) {
+         this.collisionCount = collisionCount;
+     }
+     public int getCollisionCount() {
+         return collisionCount;
      }
 
 }

@@ -17,7 +17,7 @@ import lombok.Data;
 @Data
 public class PodInfo {
 
-    private String kind;
+    private String kind = "Pod";
     private String apiVersion;
     private Metadata metadata;
     private Spec spec;

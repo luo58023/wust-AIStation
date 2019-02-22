@@ -1,11 +1,11 @@
 /**
-  * Copyright 2018 bejson.com 
+  * Copyright 2019 bejson.com 
   */
 package com.wust.pojo.kubernetes;
 import java.util.List;
 
 /**
- * Auto-generated: 2018-12-28 20:22:43
+ * Auto-generated: 2019-02-20 21:8:53
  *
  * @author bejson.com (i@bejson.com)
  * @website http://www.bejson.com/java2pojo/
